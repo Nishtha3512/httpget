@@ -1,6 +1,6 @@
 # itunes_api
 
-A new Flutter application.
+This Application is under Development.
 
 ## Getting Started
 
