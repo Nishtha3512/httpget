@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:itunes_api/git.dart';
+
 import 'package:itunes_api/homepage.dart';
-import 'package:itunes_api/search.dart';
+
 
 void main() {
   runApp(MyApp());
