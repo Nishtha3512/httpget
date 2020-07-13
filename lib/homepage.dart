@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Map data;
   List userData;
+  List newDataList;
   String _searchText = "";
   Future getData()async{
     http.Response response=await http.get("https://reqres.in/api/users?page=2");
@@ -72,11 +73,14 @@ class _HomePageState extends State<HomePage> {
   }
   _searchBar(){
     return TextField(
+     // Controller : t1;
       decoration: InputDecoration(
         hintText: "Search....."
       ),
-      onChanged: (text){
-
+      onChanged: (String value){
+        setState(() {
+          newDataList = userData.where((String) => String.toLowerCase().contains(value.toLowerCase())).toList();
+        });
       },
     );
   }
